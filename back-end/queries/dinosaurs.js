@@ -10,6 +10,17 @@ const getAllDinosaurs = async () => {
     }
 };
 
+// GET ONE dinosaur
+const getOneDinosaur = async (id) => {
+    try {
+        const oneDinosaur = await db.one("SELECT * FROM dinosaurs WHERE id=$1", id);
+        return oneDinosaur;
+    } catch (error) {
+        return error;
+    }
+};
+
 module.exports = {
-    getAllDinosaurs
+    getAllDinosaurs,
+    getOneDinosaur
 };
