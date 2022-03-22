@@ -53,8 +53,8 @@ const updateDinosaur = async (id, dinosaur) => {
         return updatedDinosaur;
     } catch (error) {
         return error;
-    }
-}
+    };
+};
 
 module.exports = {
     getAllDinosaurs,
