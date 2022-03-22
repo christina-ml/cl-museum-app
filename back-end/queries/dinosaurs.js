@@ -7,7 +7,7 @@ const getAllDinosaurs = async () => {
         return allDinosaurs;
     } catch (error) {
         return error;
-    }
+    };
 };
 
 // GET ONE dinosaur
@@ -17,7 +17,7 @@ const getOneDinosaur = async (id) => {
         return oneDinosaur;
     } catch (error) {
         return error;
-    }
+    };
 };
 
 // DELETE dinosaur
@@ -31,10 +31,23 @@ const deleteDinosaur = async (id) => {
 };
 
 // POST/CREATE dinosaur
+const createDinosaur = async (dinosaur) => {
+    try {
+        const newDinosaur = await db.one(
+            "INSERT INTO dinosaurs (dinosaur_id, name, pronunciation, meaning_of_name, diet, length_in_meters, period, mya, description, is_favorite) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *",
+            [dinosaur.dinosaur_id, dinosaur.name, dinosaur.pronunciation, dinosaur.meaning_of_name, dinosaur.diet, dinosaur.length_in_meters, dinosaur.period, dinosaur.mya, dinosaur.description, dinosaur.is_favorite]
+        );
+        return newDinosaur;
+    } catch (error) {
+        return error;
+    };
+};
+
 // PUT/UPDATE dinosaur
 
 module.exports = {
     getAllDinosaurs,
     getOneDinosaur,
-    deleteDinosaur
+    deleteDinosaur,
+    createDinosaur
 };
