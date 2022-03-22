@@ -44,10 +44,22 @@ const createDinosaur = async (dinosaur) => {
 };
 
 // PUT/UPDATE dinosaur
+const updateDinosaur = async (id, dinosaur) => {
+    try {
+        const updatedDinosaur = await db.one(
+            "UPDATE dinosaurs SET dinosaur_id=$1, name=$2, pronunciation=$3, meaning_of_name=$4, diet=$5, length_in_meters=$6, period=$7, mya=$8, description=$9, is_favorite=$10 WHERE id=$11 RETURNING *",
+            [dinosaur.dinosaur_id, dinosaur.name, dinosaur.pronunciation, dinosaur.meaning_of_name, dinosaur.diet, dinosaur.length_in_meters, dinosaur.period, dinosaur.mya, dinosaur.description, dinosaur.is_favorite, id]
+        );
+        return updatedDinosaur;
+    } catch (error) {
+        return error;
+    }
+}
 
 module.exports = {
     getAllDinosaurs,
     getOneDinosaur,
     deleteDinosaur,
-    createDinosaur
+    createDinosaur,
+    updateDinosaur
 };

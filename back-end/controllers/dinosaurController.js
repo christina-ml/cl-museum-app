@@ -5,7 +5,8 @@ const {
     getAllDinosaurs,
     getOneDinosaur,
     deleteDinosaur,
-    createDinosaur
+    createDinosaur,
+    updateDinosaur
 } = require("../queries/dinosaurs.js");
 
 // GET ALL dinosaurs
@@ -41,8 +42,9 @@ dinosaurs.delete("/:id", async (req, res)=>{
 });
 
 // POST/CREATE dinosaur
-dinosaurs.post('/', async (req, res)=>{
-    const newDinosaur = await createDinosaur(req.body);
+dinosaurs.post("/", async (req, res)=>{
+    const { body } = req;
+    const newDinosaur = await createDinosaur(body);
     if (newDinosaur.id){
         res.status(200).json(newDinosaur);
     } else {
@@ -51,5 +53,15 @@ dinosaurs.post('/', async (req, res)=>{
 });
 
 // PUT/UPDATE dinosaur
+dinosaurs.put("/:id", async (req, res)=>{
+    const { id } = req.params;
+    const { body } = req;
+    const updatedDinosaur = await updateDinosaur(id, body);
+    if (updatedDinosaur.id){
+        res.status(200).json(updatedDinosaur);
+    } else {
+        res.status(422).json({ error: "422 - Cannot update dinosaur."});
+    };
+});
 
 module.exports = dinosaurs;
