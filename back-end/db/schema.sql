@@ -14,8 +14,7 @@ CREATE TABLE dinosaurs (
     diet TEXT,
     length_in_meters INT DEFAULT 0,
     period TEXT,
-    mya_born SMALLINT,
-    mya_died SMALLINT,
+    mya TEXT,
     description TEXT,
     is_favorite BOOLEAN
 );

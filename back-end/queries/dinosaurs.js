@@ -20,7 +20,21 @@ const getOneDinosaur = async (id) => {
     }
 };
 
+// DELETE dinosaur
+const deleteDinosaur = async (id) => {
+    try {
+        const deletedDinosaur = await db.one("DELETE FROM dinosaurs WHERE id=$1 RETURNING *", id);
+        return deletedDinosaur
+    } catch (error) {
+        return error;
+    };
+};
+
+// POST/CREATE dinosaur
+// PUT/UPDATE dinosaur
+
 module.exports = {
     getAllDinosaurs,
-    getOneDinosaur
+    getOneDinosaur,
+    deleteDinosaur
 };
