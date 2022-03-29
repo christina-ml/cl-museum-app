@@ -2,13 +2,9 @@ import { Link } from "react-router-dom";
 
 function Footer() {
     return (
-        <div>
-            <h4>
-                This is Footer.js
-            </h4>
-            
+        <footer>            
             <div className="container">
-                <h5 className="container-title">Dinosaur Museum</h5>
+                <h4 className="container-title">Dinosaur Museum</h4>
                 <div className="row">
                     <div className="col-sm">
                         <div>
@@ -22,9 +18,6 @@ function Footer() {
                         <p>
                             Open Wednesday - Sunday, 10:00 am - 5:30 pm.
                         </p>
-                        <div>
-                            Directions
-                        </div>
                     </div>
                     <div className="col-sm">
                         <ul>
@@ -44,7 +37,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 

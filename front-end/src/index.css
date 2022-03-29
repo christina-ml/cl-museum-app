@@ -28,3 +28,9 @@ nav a:hover {
   color: saddlebrown;
 }
 
+footer {
+  background-color: peru;
+  text-decoration: none;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+}
