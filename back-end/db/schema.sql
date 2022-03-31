@@ -16,5 +16,6 @@ CREATE TABLE dinosaurs (
     period TEXT,
     mya TEXT,
     description TEXT,
-    is_favorite BOOLEAN
+    is_favorite BOOLEAN,
+    image TEXT
 );
