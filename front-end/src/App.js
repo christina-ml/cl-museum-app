@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 
 // PAGES
 import Home from "./pages/Home";
+import Index from "./pages/Index";
+import Show from "./pages/Show";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/dinosaurs" element={<Index />} />
+            <Route path="/dinosaurs/:id" element={<Show />} />
           </Routes>
         </main>
         <Footer />

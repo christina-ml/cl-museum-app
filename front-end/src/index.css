@@ -34,3 +34,21 @@ footer {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
 }
+
+main {
+  /* background-image: url("https://thumbs.dreamstime.com/b/adorable-seamless-pattern-funny-dinosaur-skeletons-cartoon-style-sketchy-fossil-dinosaurs-background-fossil-dinosaurs-71154901.jpg"); */
+  /* background-image: url("https://www.goodtextures.com/cache/f38a2d8a/av12d62791abb8a085977.jpg"); */
+  background-image: url("https://thumbs.dreamstime.com/b/k-seamless-sand-texture-surface-high-resolution-155920493.jpg");
+}
+
+#home-page {
+  background-color: white;
+}
+
+#card-container {
+  height: 350px;
+}
+
+#card-img {
+  max-height: 100px;
+}
