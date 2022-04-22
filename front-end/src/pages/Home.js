@@ -1,4 +1,5 @@
 // import helper
+import { Link } from "react-router-dom";
 import newDate from "../helpers/newDate";
 
 function Home() {
@@ -17,10 +18,18 @@ function Home() {
                 </div>
             </div>
 
-            <div className="container my-5">
-                <h1>Welcome!</h1>
-                <h4>Discover over 18 dinosaurs!</h4>
+            <div class="jumbotron">
+                <h1 class="display-4">Welcome!</h1>
+                <p class="lead">Discover over 18 currently extinct dinosaurs!</p>
+                <hr class="my-4" />
+                <p>
                 <img className="rounded mx-auto d-block" src="https://www.mydinosaurs.com/wp-content/uploads/2017/03/Yale-Peabody-Museum-2-600x400.jpg" alt="dinosaur display" />
+                </p>
+                <p class="lead text-center">
+                    <Link to="/dinosaurs">
+                        <a class="btn btn-outline-secondary btn-lg" role="button">Enter here</a>
+                    </Link>
+                </p>
             </div>
         </div>
     )

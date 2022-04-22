@@ -52,3 +52,12 @@ main {
 #card-img {
   max-height: 100px;
 }
+
+#dino-list-links {
+  text-decoration: none;
+  color: peru;
+}
+
+#dino-list-links:hover {
+  color:saddlebrown;
+}

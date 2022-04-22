@@ -4,14 +4,14 @@ function Dinosaur({ dinosaur }) {
     return (
         // <div className="card p-4">
         <div className="text-center card border border-5" id="card-container">
-            <div className="card-img-top" >
+            <div className="card-img-top mt-2" >
                 <Link to={`/dinosaurs/${dinosaur.id}`}>
                     <img id="card-img" className="dino-image img-thumbnail" src={dinosaur.image} alt={dinosaur.name} />
                 </Link>
             </div>
             <div className="card-body h-50">
                 <div className="card-header">
-                    <Link to={`/dinosaurs/${dinosaur.id}`}>
+                    <Link to={`/dinosaurs/${dinosaur.id}`} id="dino-list-links">
                         <h1>{dinosaur.name}</h1>
                     </Link>
                 </div>
