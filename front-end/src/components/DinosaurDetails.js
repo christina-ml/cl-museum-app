@@ -8,7 +8,7 @@ function DinosaurDetails() {
     const [dinosaur, setDinosaur] = useState([]);
     const { id } = useParams();
     // previous and next dinosaurs
-    let previousId = Number(id) - 1;
+    let previousId = Number(id) ? Number(id) - 1 : Number(id);
     let nextId = Number(id) + 1;
 
     useEffect(()=>{
