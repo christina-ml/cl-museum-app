@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Index from "./pages/Index";
 import Show from "./pages/Show";
+import FourOFour from "./pages/FourOFour";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/dinosaurs" element={<Index />} />
             <Route path="/dinosaurs/:id" element={<Show />} />
+            <Route path="*" element={<FourOFour/> } />
           </Routes>
         </main>
         <Footer />
