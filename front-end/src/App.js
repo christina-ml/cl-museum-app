@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Index from "./pages/Index";
 import Show from "./pages/Show";
+import Chatbot from "./pages/Chatbot";
 import FourOFour from "./pages/FourOFour";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/dinosaurs" element={<Index />} />
             <Route path="/dinosaurs/:id" element={<Show />} />
+            <Route path="/chatbot" element={<Chatbot />} />
             <Route path="*" element={<FourOFour/> } />
           </Routes>
         </main>
