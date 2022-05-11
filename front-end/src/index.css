@@ -45,10 +45,6 @@ main {
   background-color: white;
 }
 
-#card-container {
-  height: 350px;
-}
-
 #card-img {
   max-height: 100px;
 }

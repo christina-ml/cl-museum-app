@@ -24,8 +24,24 @@ function chatbotResponse() {
 
   if (lastUserMessage.includes('home')){
     // botMessage = `I have a link for that. ${<Link to="/">Home Page</Link>}`
-    const goofy = <Link to="/">Home Page</Link>
-    botMessage = `I have a link for thattt. ${goofy}`;
+    // const linkToHomePage = <Link to="/">Home Page</Link>
+    // botMessage = `I have a link for the home page. ${linkToHomePage}`;
+
+    // let a = document.createElement('a');
+    // var linkText = document.createTextNode("my title text");
+    // a.appendChild(linkText);
+    // a.title = "my title text";
+    // a.href = "http://example.com";
+    
+    // var link = document.createElement('a');
+    // link.setAttribute('href', '#link-here');
+    // link.textContent = 'clickme';
+    // document.body.appendChild(link);
+
+    var x = document.createElement("LINK");
+
+    botMessage = `I have a link for the home page.
+   ${document.body.appendChild(x)}`;
   }
 
 }

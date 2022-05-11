@@ -20,14 +20,10 @@ function Dinosaurs() {
 
     return (
         <div className="container">
-            <div className="row">
-                {dinosaurs.map((dinosaur, index)=>{
+            <div className="row g-3">
+                {dinosaurs.map((dinosaur)=>{
                     return (
-                        // <div className={`order-md-${index} p-2 col-4`} key={dinosaur.id} >
-                        <div className={`col-6 my-2`} key={dinosaur.id} >
-                        {/* <div className={`col-6 bg-warning p-4`} style={{height: "300px"}} key={dinosaur.id} > */}
-                            <Dinosaur dinosaur={dinosaur} />
-                        </div>
+                        <Dinosaur dinosaur={dinosaur} key={dinosaur.id}/>
                     )
                 })}
             </div>
