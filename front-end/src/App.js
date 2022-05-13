@@ -8,7 +8,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Index from "./pages/Index";
 import Show from "./pages/Show";
-import Chatbot from "./pages/Chatbot";
+import Chatbot from "./ChatBot/Chatbot";
+import Popchat from "./pages/Popchat";
 import FourOFour from "./pages/FourOFour";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="*" element={<FourOFour/> } />
           </Routes>
         </main>
+        <Popchat />
         <Footer />
       </Router>
     </div>
