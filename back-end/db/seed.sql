@@ -20,3 +20,33 @@ INSERT INTO dinosaurs (dinosaur_id, name, pronunciation, meaning_of_name, diet, 
 ('sW_2EWCsDkE', 'Vulcanodon', 'vul-ka-oh-don', 'vulcano tooth', 'herbivorous', 6.5, 'Early Jurassic', '83, 175', 'Vulcanodon was a primitive sauropod that lived in southern Africa.', true, 'https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/Vulcanodon.jpg'),
 ('U9vuZmgKwUr', 'Xenoceratops', 'ZEE-no-SEH-ruh-tops', 'alien horned face', 'herbivorous', 6, 'Early Cretaceous', '78.5, 77.5', 'Xenoceratops had horns and a bony frill with elaborate ornamentation of projections, knobs, and spikes.', false, 'https://upload.wikimedia.org/wikipedia/commons/8/8f/Xenoceratops_NT_small.jpg'),
 ('k-fVc9G-5Gm', 'Zephyrosaurus', 'ZEF-ear-ro-SORE-us', 'West wind lizard', 'herbivorous', 1.8, 'Early Cretaceous', '120, 110', 'An ornithopod dinosaur known only by a partial skull and postcranial fragments, not much about Zephyrosaurus has been discovered.', true, 'https://www.nhm.ac.uk/resources/nature-online/life/dinosaurs/dinosaur-directory/images/reconstruction/small/zephyro.jpg');
+
+INSERT INTO rooms (roomId, name, required_ticket_permissions, dinosaurs, connects_to) VALUES
+('zwfsfPU5u', 'Entrance Room', false, 'none', 'A6QaYdyKra'),
+('A6QaYdyKra', 'Ticket Center', false, 'iOVNUcv-ww', 'zwfsfPU5u, aIA6tevTne, dpQnu5wgaN, L72moIRcrX'),
+('aIA6tevTne', 'Coat Check Room', false, 'none', 'A6QaYdyKra'),
+('dpQnu5wgaN', 'Ellis Family Hall', false, 'GGvO1X9Zeh, k-fVc9G-5Gm, sW_2EWCsDkE', 'A6QaYdyKra, Ys2Trg-1OT'),
+('L72moIRcrX', 'Kit Hopkins Education Wing', true, 'YLtkN9R37, U9vuZmgKwUr', 'A6QaYdyKra, 0eNtkY5WoA, Ys2Trg-1OT'),
+('0eNtkY5WoA', 'Haley Hall', false, 'qk1bNQA9_n, JIj72eqrz6, Pr6kc4Q_Xf', 'L72moIRcrX, dBZeK6vhpt'),
+('Ys2Trg-1OT', 'Terrell Leon Lecture Room', true, 'none', 'dpQnu5wgaN, L72moIRcrX, VEr3w2ca_v'),
+('VEr3w2ca_v', 'Cabrera Hall', false, 'GOycwH_EiU, Lfp-pAYmDv', 'Ys2Trg-1OT, Y707HL8uP9'),
+('Y707HL8uP9', 'Roberts Room', false, 'wuL4ddBinQ', 'VEr3w2ca_v, dBZeK6vhpt, Gp6nCN1JGT'),
+('dBZeK6vhpt', 'Paxton Decker Terrace', true, 'none', '0eNtkY5WoA, Y707HL8uP9, 1FMoeqQxFk'),
+('1FMoeqQxFk', 'Blackwell Amphitheater', true, 'none', 'dBZeK6vhpt, Gp6nCN1JGT'),
+('Gp6nCN1JGT', 'Reyes Hall', false, 'ft5Gs5izdq, aIR95B2TWm, 2GglUqKT0G, WHQcpcOj0G, V53DvdhV2A', 'Y707HL8uP9, 1FMoeqQxFk, qi5e4IFDby, nt85di9a1V'),
+('qi5e4IFDby', 'Bryan Decker Hall', false, 'GKl035EYKN, BFjjLjea-O', 'Gp6nCN1JGT'),
+('nt85di9a1V', 'Owen Family Room', false, 'none', 'Gp6nCN1JGT');
+
+INSERT INTO users (firstname, lastname, username, password, contact_email, phone_number, gender, age, interested_in, active_user) VALUES
+('Christina', 'Loiacono', 'dinoChristina', 'abc123dino!', 'christina@dinomuseum.edu', '555-555-5555', 'female', 30, 'Apatosaurus', true),
+('Filbert', 'Sanjeet', 'sanjfilbert', 'iLovedin0s', 'filbert@dinokids.edu', '555-555-4444', 'male', 15, 'Compsognathus', true),
+('Aruna', 'Sarika', 'arunasari', 'chiCkfIlA44', 'sarika@dinokids.edu', '555-555-3333', 'female', 12, 'Utahraptor', true),
+('Zoltan', 'Kaja', 'zoltkaja', 
+'saveTh33arth', 'zoltank@dinokids.edu', '555-555-1133', 'male', 19, 'Indosuchus', true),
+('Bethania', 'Yale', 'bethaniayale', 
+'wh4leTalk', 'bethyale@dinoseniors.edu', '555-555-1122', 'female', 64, 'Jingshanosaurus', true),
+('Hekabe', 'Mahmud', 'hekmah', 
+'lizards4life', 'hekmahmud@dinoseniors.edu', '555-555-1133', 'male', 75, 'Vulcanodon', true),
+('Cornelia', 'Katrijn', 'cornkat', 
+'cornd0gsGoWoof', 'cornkat@dinomuseum.edu', '555-555-1444', 'female', 32, 'Minmi', true),
+('Kourtney', 'Kaylie', 'kourtkay24', 'pawprintzR0ck', 'kkaylie@dinokids.edu', '555-555-2233', 'female', 10, 'Brachiosaurus', true);
