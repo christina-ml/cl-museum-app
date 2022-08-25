@@ -59,3 +59,16 @@ main {
 #dino-list-links:hover {
   color:saddlebrown;
 }
+
+/* MOBILE styling */
+@media only screen and (max-width: 440px){
+
+  /* home */
+  .jumbotron img {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+}

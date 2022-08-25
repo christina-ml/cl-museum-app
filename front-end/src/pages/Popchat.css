@@ -23,7 +23,7 @@
 
 #chatCon .chat-box .msg-area {
   overflow: hidden;
-  height: 370px;
+  height: 410px;
   padding: 15px;
 }
 
@@ -64,7 +64,7 @@
   border-radius: 15px;
 }
 
-#chatCon .chat-box .footer input:foucs {
+#chatCon .chat-box .footer input:focus {
   outline: none;
 }
 
@@ -90,3 +90,23 @@
   width: 25%;
 }
 /*# sourceMappingURL=auto.css.map */
+
+
+@media only screen and (max-width: 440px){
+  #chatCon {
+    width: 70%;
+    bottom: 0%;
+    right: 3%;
+  }
+
+  #chatCon .chat-box {
+    width: 200px;
+    height: 50vh;
+    border-radius: 25px;
+    background-color: #eee;
+  }
+
+  #chatCon .chat-box .msg-area {
+    height: 170px;
+  }
+}
