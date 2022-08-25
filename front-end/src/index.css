@@ -13,10 +13,12 @@ code {
 }
 
 nav {
+  margin-top: -15px;
   background-color: peru;
   /* background-color: olive; */
   cursor: url(http://www.rw-designer.com/cursor-extern.php?id=38218);
 }
+
 
 nav a {
   text-decoration: none;
