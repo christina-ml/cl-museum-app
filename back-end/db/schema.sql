@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS dinosaurs;
 CREATE TABLE dinosaurs (
     id SERIAL PRIMARY KEY,
     dinosaur_id TEXT UNIQUE NOT NULL,
-    name TEXT NOT NULL,
+    name TEXT UNIQUE NOT NULL,
     pronunciation TEXT,
     meaning_of_name TEXT,
     diet TEXT,
