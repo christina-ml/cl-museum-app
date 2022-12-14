@@ -1,7 +1,17 @@
+# Deployment
+Front-end: https://cl-museum-app.netlify.app/
+Back-end: https://cl-museum-app-be.fly.dev/
+
+
 # deployment to fly.io
 - add tables to elephantsql with seed data
-- fly.io -> follow directions to create app, then set secrets with elephantsql postgres link
-- netlify -> add environment varialbe REACT_APP_API_URL= deployed fly.io link without backslash
+- fly.io -> follow directions to create app, then [set secrets](https://fly.io/docs/reference/secrets/#setting-secrets) with elephantsql postgres link
+```
+$ flyctl secrets set DATABASE_URL=postgres://example.com/mydb 
+```
+
+- netlify -> add environment varialbe `REACT_APP_API_URL=` deployed fly.io link without backslash
+- add environment variable `CI` with value of `false` (lowercase)
 
 # Museum App
 
